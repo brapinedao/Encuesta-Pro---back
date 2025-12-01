@@ -8,6 +8,8 @@ public class SurveyDto
     public int CompanyId { get; set; }
     public string Title { get; set; }
     public string Description { get; set; }
+    public bool IsActive { get; set; }
+    public DateTime CreatedAt { get; set; }
     public List<QuestionDto> Questions { get; set; }
 }
 
@@ -16,6 +18,7 @@ public class CreateSurveyDto
     public int CompanyId { get; set; }
     public string Title { get; set; }
     public string Description { get; set; }
+    public bool IsActive { get; set; } = true;
     public List<CreateQuestionDto> Questions { get; set; }
 }
 

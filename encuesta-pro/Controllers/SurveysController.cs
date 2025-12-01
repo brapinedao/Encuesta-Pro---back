@@ -40,6 +40,8 @@ public class SurveysController : ControllerBase
             CompanyId = s.CompanyId,
             Title = s.Title,
             Description = s.Description,
+            IsActive = s.IsActive,
+            CreatedAt = s.CreatedAt,
             Questions = s.Questions.Select(q => new QuestionDto
             {
                 Id = q.Id,
@@ -73,6 +75,8 @@ public class SurveysController : ControllerBase
             CompanyId = survey.CompanyId,
             Title = survey.Title,
             Description = survey.Description,
+            IsActive = survey.IsActive,
+            CreatedAt = survey.CreatedAt,
             Questions = survey.Questions.Select(q => new QuestionDto
             {
                 Id = q.Id,
@@ -95,6 +99,8 @@ public class SurveysController : ControllerBase
             CompanyId = dto.CompanyId,
             Title = dto.Title,
             Description = dto.Description,
+            IsActive = dto.IsActive,
+            CreatedAt = DateTime.UtcNow,
             Questions = dto.Questions.Select(q => new Question
             {
                 Text = q.Text,
@@ -115,6 +121,8 @@ public class SurveysController : ControllerBase
             CompanyId = survey.CompanyId,
             Title = survey.Title,
             Description = survey.Description,
+            IsActive = survey.IsActive,
+            CreatedAt = survey.CreatedAt,
             Questions = survey.Questions.Select(q => new QuestionDto
             {
                 Id = q.Id,
