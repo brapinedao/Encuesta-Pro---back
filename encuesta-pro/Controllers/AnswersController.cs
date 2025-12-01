@@ -75,6 +75,7 @@ public class AnswersController : ControllerBase
         };
     }
 
+    [AllowAnonymous]
     [HttpPost]
     public async Task<ActionResult<AnswerDto>> CreateAnswer(CreateAnswerDto dto)
     {

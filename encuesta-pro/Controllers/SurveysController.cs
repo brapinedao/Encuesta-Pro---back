@@ -56,6 +56,7 @@ public class SurveysController : ControllerBase
         }).ToList();
     }
 
+    [AllowAnonymous]
     [HttpGet("{id}")]
     public async Task<ActionResult<SurveyDto>> GetSurvey(int id)
     {
